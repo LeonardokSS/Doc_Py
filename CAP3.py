@@ -4,8 +4,18 @@ numeros = "float ou int"
 
 string = "isso e uma string"
 
-Texto = "/n" abre uma nova linha, "texto1/nTexto2"
-
+Texto = "/n" abre uma nova linha, "texto1/nTexto2" 
+(''') EX:
+-----------------
+texto = '''Olá,
+Isso é uma string
+que ocupa múltiplas linhas.'''
+print(texto)
+SAIDA-----------
+Olá,
+Isso é uma string
+que ocupa múltiplas linhas.
+-----------------------------
 + = soma duas trings "sss"+"ooo" = "sssooo"
 
 Strings perto uma da outra se fecham automaticamente 'ss'  'ss'= 'ssss
