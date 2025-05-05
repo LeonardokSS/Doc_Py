@@ -30,3 +30,17 @@ print(c)
 print(type(a))
 print(type(b))
 print(type(c))
+#função in range server para criar uma sequencia de numero, no print 
+
+for i in range(5):
+    print(i)
+0
+1
+2
+3
+4
+#A instrução break sai imediatamente do laço de repetição mais interno, seja for ou while:for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(f"{n} igual a {x} * {n//x}")
+            break
