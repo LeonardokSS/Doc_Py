@@ -14,36 +14,100 @@ pi = 3.141592653589931
 #Linhas lógicas
 #A instrução completa que pode ocupar várias linhas físicas, mas que o Python entende como uma só.
 
+
 #Linhas físicas
-#Literalmente uma linha fisica composta por caracteres e encerrada por enter ou \
+#Literalmente uma linha fisica composta por caracteres e encerrada por enter ou \.
 
 soma = 1 + 2 + 3 \ 
        3 + 4 + 5
-# 2 linhas fisicas que formam uma linha lógica
+# 2 linhas fisicas que formam uma linha lógica.
+
 
 # Junção de linha explícita
-#Duas ou mais linhas físicas podem ser juntadas em linhas lógicas usando o caractere contrabarra (\) da seguinte forma: quando uma linha física termina com uma contrabarra que não é parte da uma literal string ou comentário, ela é juntada com a linha seguinte formando uma única linha lógica, removendo a contrabarra e o caractere de fim de linha seguinte.
+#Duas linhas fisicas podem ser unidas por uma contrabarra(\).
+
 
 # Junção de linha implícita 
-#Expressões edntre ( ), [ ],{ } podem ser quebradas em linhas físicas sem a necessidae de utilizar \
+#linha físicas dentro de ( ), [ ],{ } podem ser quebradas em linhas lógicas sem a necessidae de utilizar \.
+
 
 #Linhas em branco
-#Uma linha lógica que contém apenas espaços, tabulações, quebras de página e possivelmente um comentário é ignorada (ou seja, nenhum token NEWLINE é gerado). Durante a entrada interativa de instruções, o tratamento de uma linha em branco pode diferir dependendo da implementação do interpretador. No interpretador interativo padrão, uma linha lógica totalmente em branco (ou seja, uma que não contenha nem mesmo espaço em branco ou um comentário) encerra uma instrução de várias linhas.
+#Linhas de lógica totalmente em braco são completamente anuladas, e todas as ações que estão nela são ignoradas.
 
-#CAP 3
-#Objetos são abstrações do Python para dados. Todos os dados em um programa Python são representados por objetos ou por relações entre objetos. (De certo modo, e em conformidade com o modelo de Von Neumann de um “computador com programa armazenado”, código também é representado por objetos.)
+#CAP 3--------------------------------------------------------------------------------
 
-#Todo objeto tem uma identidade, um tipo e um valor. A identidade de um objeto nunca muda depois de criado; você pode pensar nisso como endereço de objetos em memória. O operador is compara as identidades de dois objetos; a função id() retorna um inteiro representando sua identidade.
+
+#Objetos são abstrações do Python para dados. Todos os tipos de dados no Python são objetos.
+
+
+#Todo os objetos tem identidade, tipo e valor. A identidade de um objeto nunca muda depois de criado; você pode pensar nisso como endereço de objetos em memória. O 'is'  compara as identidades de dois objetos; a função id() retorna um inteiro representando sua identidade.
+
+#Objetos que podem mudar seu valor são chamados mutáveis e os que tem valor definido na sua criação e não podem mudar são imutáveis.
+
 
 #O tipo de um objeto determina as operações que o objeto implementa (por exemplo, “ele tem um comprimento?”) e também define os valores possíveis para objetos desse tipo. A função type() retorna o tipo de um objeto (que é também um objeto). Como sua identidade, o tipo do objeto também é imutável. [1]
 
-#Alguns objetos contêm referências a recursos “externos”, como arquivos abertos ou janelas. Entende-se que esses recursos são liberados quando o objeto é coletado como lixo, mas como a coleta de lixo não é garantida, tais objetos também fornecem uma maneira explícita de liberar o recurso externo, geralmente um método close(). Os programas são fortemente recomendados para fechar explicitamente esses objetos. A instrução try…finally e a instrução with fornecem maneiras convenientes de fazer isso.
 
-#Alguns objetos contêm referências a outros objetos; eles são chamados de contêineres. Exemplos de contêineres são tuplas, listas e dicionários. As referências fazem parte do valor de um contêiner. Na maioria dos casos, quando falamos sobre o valor de um contêiner, nos referimos aos valores, não às identidades dos objetos contidos; entretanto, quando falamos sobre a mutabilidade de um contêiner, apenas as identidades dos objetos contidos imediatamente estão implícitas. Portanto, se um contêiner imutável (como uma tupla) contém uma referência a um objeto mutável, seu valor muda se esse objeto mutável for alterado.
+#Contêiners são objetos que fazem referencia a outros objetos. São eles ('Tuplas,Listas e Dicionários'). As referências fazem parte do valor de um contêiner. As referencias fazem parte do contêiner.
 
-#Os tipos afetam quase todos os aspectos do comportamento do objeto. Até mesmo a importância da identidade do objeto é afetada em algum sentido: para tipos imutáveis, as operações que calculam novos valores podem realmente retornar uma referência a qualquer objeto existente com o mesmo tipo e valor, enquanto para objetos mutáveis isso não é permitido. Por exemplo, após a = 1; b = 1, a e b podem ou não se referir ao mesmo objeto com o valor um, dependendo da implementação. Isto ocorre porque int é um tipo imutável, então a referência a 1 pode ser reutilizada. Este comportamento depende da implementação usada, então não deve ser considerada confiável, mas é algo para se estar ciente ao fazer uso de testes de identidade de objeto. No entanto, após c = []; d = [], c e d têm a garantia de referir-se a duas listas vazias diferentes e únicas. (Observe que e = f = [] atribui o mesmo objeto para e e f.)
+
+#Os tipos afetam todos os aspectos e comportamentos do objeto.Para objetos imutáveis,
+# se atribuirmos um mesmo valor a duas variáveis, o python vai dizer que eles apontam para o mesmo objeto, já para valores imutáveis, se c = [] e d = [] serão duas listas sempre diferentes, mesmo que elas possuam o mesmo valor. 
+
  
 #hierarquia de tipos padrão
-#Abaixo está uma lista dos tipos que são embutidos no Python. Módulos de extensão (escritos em C, Java ou outras linguagens, dependendo da implementação) podem definir tipos adicionais. Versões futuras do Python podem adicionar tipos à hierarquia de tipo (por exemplo, números racionais, matrizes de inteiros armazenadas de forma eficiente, etc.), embora tais adições sejam frequentemente fornecidas por meio da biblioteca padrão.
 
-#Algumas das descrições de tipo abaixo contêm um parágrafo listando “atributos especiais”. Esses são atributos que fornecem acesso à implementação e não se destinam ao uso geral. Sua definição pode mudar no futuro.
+#None
+#Utilizado para significar a ausência de um valor, esse tipo possui um valor único
+#Exemplo: a = None, b = None
+
+
+#NotImplemented
+#Possui um valor único e existe um unico objeto dessa classe, ele é usado quando uma classe não implementa um método.
+
+
+class MeuNumero:
+    def __init__(self, valor):
+        self.valor = valor
+
+    def __add__(self, outro):
+        if isinstance(outro, MeuNumero):
+            return MeuNumero(self.valor + outro.valor)
+        return NotImplemented  # Diz ao Python que ele não sabe lidar com isso
+
+a = MeuNumero(10)
+b = MeuNumero(5)
+c = a + b
+print(c.valor)  # Saída: 15
+
+print(a + 3) # Isso vai causar um TypeError, porque MeuNumero + int não é implementado
+
+
+#Sequências
+#Formados por sequêcias de numeros finitos e não negativos, O Índice começa do 0. Você pode quanto itens estão presentes com 'len()'e usar 'a[]' para acessar um item
+a = [10, 20, 30, 40, 50]
+
+
+# Acessando elementos
+print(a[0])    # 10 (primeiro item)
+print(a[-1])   # 50 (último item)
+
+
+# Fatiamento simples
+print(a[1:4])  # [20, 30, 40] (do índice 1 até 3)
+
+
+# Fatiamento com passo
+print(a[0:5:2])  # [10, 30, 50] (pula de 2 em 2)
+
+
+# Mudando um valor (mutável)
+a[2] = 99
+print(a)  # [10, 20, 99, 40, 50]
+
+
+#sequências imutaveis
+#São elas string e tupla
+s = 'python'
+print(s[0]) # p
+print(s[2]) # t
