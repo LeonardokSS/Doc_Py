@@ -84,6 +84,7 @@ print(a + 3) # Isso vai causar um TypeError, porque MeuNumero + int não é impl
 
 
 #Sequências
+#Função len(nome sequencia) mostra o numero de itens de uma sequencia
 #Formados por sequêcias de numeros finitos e não negativos, O Índice começa do 0. Você pode quanto itens estão presentes com 'len()'e usar 'a[]' para acessar um item
 a = [10, 20, 30, 40, 50]
 
@@ -111,3 +112,8 @@ print(a)  # [10, 20, 99, 40, 50]
 s = 'python'
 print(s[0]) # p
 print(s[2]) # t
+
+
+#Dicionários
+#Conjunto de Objetos que são armazenados sem ordem, e podem ser acesados por chaves
+#carro = {"marca": "Chevrolet", "modelo": "Tracker", "ano": 2020}
