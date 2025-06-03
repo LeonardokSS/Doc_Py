@@ -1,0 +1,25 @@
+/* --s pacotes servem para juntar módulos que fazem parte de uma aplicação específica
+
+calculadora/
+│── __init__.py
+│
+├── soma/
+│   ├── __init__.py
+│   ├── soma.py
+│   ├── soma5.py
+│
+├── subtracao/
+│   ├── __init__.py
+│   ├── subtracao.py
+│   ├── subtracao5.py
+│
+├── multiplicacao/
+│   ├── __init__.py
+│   ├── potencia.py
+│   ├── multiplicacao.py
+│   ├── raiz_quadrada.py
+│
+└── divisao/
+    ├── __init__.py
+    ├── divisao.py
+    ├── raiz_quadrada.py */

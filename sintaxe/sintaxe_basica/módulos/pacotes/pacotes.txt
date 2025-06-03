@@ -1,0 +1,3 @@
+Um pacote é o agregado de funções em diferentes arquivos, com __init__.py = o arquivo inicializador de todos os métodos
+
+No exemplo dessa pasta, foi feito um pacote sobre calculadora, todos os métodos usuais da calculadora, eles são usados no arquivo __init__.py, um arquivo .css foi feito para mostrar a estrutura do pacote(não é necessário a utilização desse arquivo usualmente)
