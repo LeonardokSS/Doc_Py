@@ -30,4 +30,12 @@ for p in range(5):
  print(p,lista_exemplo[p])
 
 
+lista_pratos = ["prato 2","prato 3","prato 4","prato 5","prato 6",]
+
+#Defino que o i = o tamanho da lista e depois defindo que a cada print um elemento da lista e removido
+for i in range(len(lista_pratos)):
+ print(lista_pratos)
+ lista_pratos.pop(0)
+
+
 

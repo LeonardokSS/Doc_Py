@@ -27,8 +27,6 @@ texto.rstrip()                   # Remove espaços à direita (fim)
 
 # Divisão e Junção
 
-texto.replace('antigo', 'novo')  # Substitui todas as ocorrências de 'antigo' por 'novo'  
-
 texto.strip()                    # Remove espaços em branco no início e no fim  
 
 texto.lstrip()                   # Remove espaços à esquerda (início)  
