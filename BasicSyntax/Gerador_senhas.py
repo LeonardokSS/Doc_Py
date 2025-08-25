@@ -13,7 +13,7 @@ for letra in letras:
     letras_lista.append(letra)
 
 
-penis = []
+A = []
 Final = ""
 def GerarSenha():
     
@@ -22,9 +22,10 @@ def GerarSenha():
         #Transforma para string
         SenhaSTR = "".join(Senha)
         #Adiciona lista
-        penis.append(SenhaSTR)
-    final = "".join(penis)
+        A.append(SenhaSTR)
+    final = "".join(A)
     print("A sua nova senha é:{}".format(final))
+
 
 
 GerarSenha()
