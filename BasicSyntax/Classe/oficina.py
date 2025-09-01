@@ -31,7 +31,8 @@ BMW.potencia = 90
 BMW.torque = 30
 BMW.turbo = 'False'
 
-BMW.Instalar_Turbo('True')
+BMW.Instalar_Turbo
+
 BMW.Check_Potencia
     
     

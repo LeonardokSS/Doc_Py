@@ -86,11 +86,6 @@ class Oficina(Carro_antigo,Dono):
 
 Carro = Oficina()
 
-Carro.motor = "True"
-Carro.embreagem = "True"
-
-Carro.verificar_embreagem
-Carro.verificar_motor
 
 
 
