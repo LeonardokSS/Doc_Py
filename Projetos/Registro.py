@@ -1,6 +1,6 @@
 class Carro_antigo():
    
-   
+   # Definição de variaveis de input
    def __init__(self):
     self.nome = "Fusca"
     self.cor = "Preto"
