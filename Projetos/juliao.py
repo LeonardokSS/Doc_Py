@@ -19,7 +19,7 @@ def reconhecer_voz():
     #Enviar texto para API do google para transformar o audio em texto 
      try:
        audio = reconhecer.recognize_google(audio, language="pt-BR")
-       print(f"Você disse: {audio} ")
+       print(f"Você disse: {audio}? ")
        print("Caso não clique no botão escrito abortar!")
        time.sleep(5)
      except sp.UnknownValueError:
