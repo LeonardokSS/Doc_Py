@@ -16,7 +16,7 @@ requerirClima = rq.get(url)
 #Transoformar os dados em JSON
 Dados = requerirClima.json()
 
-print(Dados)
+
 
 temp = Dados["main"]["temp"]
 desc = Dados["weather"][0]["description"]
@@ -24,4 +24,3 @@ umidade = Dados["main"]["humidity"]
 
 
 print(f"A temperatura da cidade {cidade} é {temp} C\nO tempo está:{desc}\nA umidade é {umidade}%")
-
