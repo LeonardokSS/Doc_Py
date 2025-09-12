@@ -1,3 +1,21 @@
 git add. 
 git commit -q -m "Mensagem do commit"
 git push -q -u origin main
+
+
+#codigos do git
+
+  
+
+git init   ----cria um repositorio
+git commit -m "nome da versao da alteração"
+git branch -M main
+git remote add origin "link para o repositorio"
+git push -u origin main ---- realizar alterações
+
+
+# atualizar um comando com o resposirio criado
+git add.  --começa alteração
+git commit -q -m "nome da alteração"
+git push -q -u origin main --- envia tudo
+
