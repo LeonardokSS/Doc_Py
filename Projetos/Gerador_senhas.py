@@ -35,22 +35,43 @@ Final = ""
     
 
 def GerarSenha():
-        Tipo_senha = input("***********************************      Gerador de Senhas         *********************************** \nEscolha o nível da senha:\n1 Apenas letras / 2 Letras e números / 3 Letras, números e símbolos \n Digite o número correspondente ao nível desejado:") 
-        match(Tipo_senha):
-            case (1):
+        Tipo_senha = int(input("***********************************      Gerador de Senhas         *********************************** \nEscolha o nível da senha:\n1 Apenas letras / 2 Letras e números / 3 Letras, números e símbolos \n Digite o número correspondente ao nível desejado:")) 
+
+
+
+        
+        if Tipo_senha == 1:
                 for n in range(NUM):
                     Senha = random.choices(letras_lista)
                     #Transforma para string
                     SenhaSTR = "".join(Senha)
                     #Adiciona lista
                     Lista_string.append(SenhaSTR)
-            case (2):
-                print("sim ta funcionando")
-        final = "".join(Lista_string)
-        print("A sua nova senha é:  {}".format(final))
-       
+                    final = "".join(Lista_string)
+                    print("A sua nova senha é:  {}".format(final))
 
+        elif Tipo_senha == 2:
+                for n in range(NUM):
+                    Senha = random.choices(letras_lista,numeros_lista)
+                    #Transforma para string
+                    SenhaSTR = "".join(Senha)
+                    #Adiciona lista
+                    Lista_string.append(SenhaSTR)
+                    final = "".join(Lista_string)
+                    print("A sua nova senha é:  {}".format(final))
 
+        elif Tipo_senha == 3:
+                for n in range(NUM):
+                    Senha = random.choices(letras_lista,numeros_lista,pontuacao_lista)
+                    #Transforma para string
+                    SenhaSTR = "".join(Senha)
+                    #Adiciona lista
+                    Lista_string.append(SenhaSTR)
+                    final = "".join(Lista_string)
+                    print("A sua nova senha é:  {}".format(final))
 
-
+        else:
+                print("Erro nas opções")
+                
+            
 GerarSenha()
