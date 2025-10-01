@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Filé à Parmegiana",
+    "categoria": "Prato Principal",
+    "preco": 38.90
+  },
+  {
+    "nome": "Spaghetti ao Alho e Óleo",
+    "categoria": "Massas",
+    "preco": 25.50
+  },
+  {
+    "nome": "Suco de Laranja",
+    "categoria": "Bebida",
+    "preco": 8.00
+  }
+]
